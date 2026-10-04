@@ -24,7 +24,7 @@ BASE = 'http://localhost:8080'
 DB_URL = os.environ.get('RESPLAN_DB_URL', 'jdbc:postgresql://localhost:5432/resplan_lab10')
 JAR = next((ROOT / 'target').glob('resplan-backend-*.jar')).relative_to(ROOT).as_posix()
 PASSWORD = 'resplan'
-ISO_DATE = re.compile(r'(\d{4})-(\d{2})-(\d{2})')
+ISO_DATE = re.compile(r'\b(\d{4})-(\d{2})-(\d{2})\b')
 
 
 class Api:
