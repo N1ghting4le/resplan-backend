@@ -16,7 +16,7 @@ mvn spring-boot:run
 export RESPLAN_DB_USER=resplan_app RESPLAN_DB_PASSWORD=...
 mvn spring-boot:run -Dspring-boot.run.profiles=postgres,demo
 
-# все автоматические тесты (250: 211 модульных и 39 интеграционных) и отчет о покрытии JaCoCo
+# все автоматические тесты (252: 211 модульных и 41 интеграционный) и отчет о покрытии JaCoCo
 mvn test
 ```
 
@@ -32,7 +32,7 @@ mvn test
 | Команда | Что выполняется |
 |---|---|
 | `mvn test -DexcludedGroups=integration` | 211 модульных тестов: JUnit 5, Mockito, AssertJ, без Spring-контекста и базы данных |
-| `mvn test` | модульные и 39 интеграционных тестов REST API (`@Tag("integration")`, MockMvc, H2) |
+| `mvn test` | модульные и 41 интеграционный тест REST API (`@Tag("integration")`, MockMvc, H2) |
 | `mvn verify` | то же и проверка порога покрытия JaCoCo: строки не менее 80 %, ветви не менее 70 % |
 | `python docs/testcases/run_testcases.py` | 41 тест-кейс UC-1 – UC-9 на запущенном приложении (PostgreSQL, профили `postgres,demo`) |
 

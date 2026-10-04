@@ -192,6 +192,12 @@ def uc1_projects(api, ctx):
     return s == 200 and codes == ['ATLAS', 'ORION'], f"код {s}, проекты: {', '.join(codes)}"
 
 
+def uc1_card(api, ctx):
+    s, b = api.call('GET', '/api/projects/1', 'pm')
+    return s == 200 and b['code'] == 'ATLAS' and b['pm'] == 'Иванов Дмитрий', (
+        f"код {s}, {b['code']} «{b['name']}», PM {b['pm']}, приоритет {b['priority']}, начало {b['startDate']}")
+
+
 def uc1_tasks(api, ctx):
     s, b = api.call('GET', '/api/projects/1/tasks', 'pm')
     ctx['tasks'] = len(b)
@@ -269,6 +275,8 @@ def uc1_foreign(api, ctx):
 case('UC-1-01', 'Просмотр карточки проекта и сетевого графика', ['FR1-1', 'FR1-3'], [
     ('Войти под учетной записью pm, выполнить GET /api/projects',
      'Код 200; список содержит проекты ATLAS и ORION, которыми руководит pm', uc1_projects),
+    ('Открыть карточку проекта ATLAS: GET /api/projects/1',
+     'Код 200; код и название проекта, PM Иванов Дмитрий, приоритет и дата начала', uc1_card),
     ('Открыть задачи проекта ATLAS: GET /api/projects/1/tasks',
      'Код 200; 10 задач с длительностями и предшественниками', uc1_tasks),
     ('Открыть сетевой график: GET /api/projects/1/schedule',
@@ -578,6 +586,13 @@ def uc6_panel(api, ctx):
     return s == 200 and len(b) == 2 and all(c['status'] == 'OPEN' for c in b), f"код {s}; " + '; '.join(rows)
 
 
+def uc6_card(api, ctx):
+    s, b = api.call('GET', '/api/conflicts/1', 'rm')
+    return s == 200 and b['from'] == '2026-10-19' and b['to'] == '2026-10-27', (
+        f"код {s}, пересечение {b['from']} – {b['to']}: {b['bookingA']} {b['first']['loadPercent']} % и "
+        f"{b['bookingB']} {b['second']['loadPercent']} %")
+
+
 def uc6_resolve(api, ctx):
     c = ctx['conflicts'][0]
     s, b = api.call('POST', f"/api/conflicts/{c['id']}/resolution", 'rm',
@@ -617,6 +632,8 @@ case('UC-6-01', 'Просмотр панели ресурсных конфлик
     ('Войти под учетной записью rm, выполнить GET /api/conflicts',
      'Код 200; два открытых конфликта с пересекающимися бронями, приоритетами проектов и суммарной загрузкой',
      uc6_panel),
+    ('Открыть карточку конфликта №1: GET /api/conflicts/1',
+     'Код 200; период пересечения 19.10.2026 – 27.10.2026 и загрузка по каждой брони', uc6_card),
 ])
 case('UC-6-02', 'Разрешение конфликта в пользу приоритетного проекта', ['FR6-2', 'FR6-3'], [
     ('Разрешить конфликт №1, сохранив бронь ATLAS: POST /api/conflicts/1/resolution',

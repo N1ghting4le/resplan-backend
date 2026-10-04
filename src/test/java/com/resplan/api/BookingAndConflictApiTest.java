@@ -31,6 +31,17 @@ class BookingAndConflictApiTest extends ApiTestSupport {
     }
 
     @Test
+    void conflictCardShowsBothBookings() throws Exception {
+        getAs("rm", "/api/conflicts/{id}", 2)
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.employee").value("Зелински Марек"))
+                .andExpect(jsonPath("$.bookingA").value("ORION"))
+                .andExpect(jsonPath("$.bookingB").value("HELIX"))
+                .andExpect(jsonPath("$.totalLoad").value(120));
+        getAs("rm", "/api/conflicts/{id}", 99).andExpect(status().isNotFound());
+    }
+
+    @Test
     void resolutionKeepsOneBookingReleasesOtherAndNotifiesPm() throws Exception {
         int atlas = bookingId("Ковалёв", "ATLAS", "HARD");
         int orion = bookingId("Ковалёв", "ORION", "HARD");

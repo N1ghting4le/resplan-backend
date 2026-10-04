@@ -23,6 +23,17 @@ class ProjectPlanApiTest extends ApiTestSupport {
     }
 
     @Test
+    void projectCardShowsPmPriorityAndStart() throws Exception {
+        getAs("emp", "/api/projects/{id}", ATLAS)
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.code").value("ATLAS"))
+                .andExpect(jsonPath("$.pm").value("Иванов Дмитрий"))
+                .andExpect(jsonPath("$.priority").value(1))
+                .andExpect(jsonPath("$.startDate").value("2026-10-05"));
+        getAs("pm", "/api/projects/{id}", 99).andExpect(status().isNotFound());
+    }
+
+    @Test
     void scheduleOfAtlasUsesCriticalPathMethod() throws Exception {
         getAs("emp", "/api/projects/{id}/schedule", ATLAS)
                 .andExpect(status().isOk())
