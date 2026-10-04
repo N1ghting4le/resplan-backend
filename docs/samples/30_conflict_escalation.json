@@ -1,0 +1,57 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/conflicts/2/escalation",
+    "user": "rm",
+    "body": {
+      "note": "Оба проекта критичны для заказчиков, требуется решение операционного директора"
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "id": 2,
+      "employee": "Зелински Марек",
+      "bookingA": "ORION",
+      "bookingB": "HELIX",
+      "from": "2026-11-02",
+      "to": "2026-11-20",
+      "totalLoad": 120,
+      "status": "ESCALATED",
+      "first": {
+        "id": 12,
+        "employeeId": 10,
+        "employee": "Зелински Марек",
+        "type": "PROJECT",
+        "kind": "HARD",
+        "title": "ORION",
+        "projectId": 2,
+        "projectPriority": 2,
+        "startDate": "2026-10-05",
+        "endDate": "2026-12-18",
+        "loadPercent": 80,
+        "protectedTime": false,
+        "active": true
+      },
+      "second": {
+        "id": 13,
+        "employeeId": 10,
+        "employee": "Зелински Марек",
+        "type": "PROJECT",
+        "kind": "HARD",
+        "title": "HELIX",
+        "projectId": 3,
+        "projectPriority": 2,
+        "startDate": "2026-11-02",
+        "endDate": "2026-11-20",
+        "loadPercent": 40,
+        "protectedTime": false,
+        "active": true
+      },
+      "detectedAt": "2026-10-04T18:28:57.750782Z",
+      "resolutionNote": "Оба проекта критичны для заказчиков, требуется решение операционного директора"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/auth/login",
+    "user": null,
+    "body": {
+      "login": "emp",
+      "password": "resplan"
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyZXNwbGFuIiwic3ViIjoiZW1wIiwicm9sZSI6IkVNUCIsImlhdCI6MTc5MTEzODYwMiwiZXhwIjoxNzkxMTY3NDAyfQ.ymnhwVQzwsKkBYjoeyVRGQfAx0Bd22rsOk0poyz1dv4",
+      "tokenType": "Bearer",
+      "expiresAt": "2026-10-05T02:30:02.056402100Z",
+      "user": {
+        "id": 5,
+        "login": "emp",
+        "role": "EMP",
+        "employeeId": 1,
+        "fullName": "Ковалёв Алексей"
+      }
+    }
+  }
+}

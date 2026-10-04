@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/projects",
+    "user": null,
+    "body": null
+  },
+  "response": {
+    "status": 401,
+    "reason": "",
+    "contentType": "application/problem+json;charset=UTF-8",
+    "body": {
+      "type": "about:blank",
+      "title": "Unauthorized",
+      "status": 401,
+      "detail": "Маркер доступа отсутствует, недействителен или просрочен"
+    }
+  }
+}

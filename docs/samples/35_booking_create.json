@@ -1,0 +1,84 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/bookings",
+    "user": "rm",
+    "body": {
+      "employeeId": 8,
+      "projectId": 1,
+      "kind": "HARD",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-16",
+      "loadPercent": 100
+    }
+  },
+  "response": {
+    "status": 201,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "booking": {
+        "id": 19,
+        "employeeId": 8,
+        "employee": "Лис Сергей",
+        "type": "PROJECT",
+        "kind": "HARD",
+        "title": "ATLAS",
+        "projectId": 1,
+        "projectPriority": 1,
+        "startDate": "2026-10-12",
+        "endDate": "2026-10-16",
+        "loadPercent": 100,
+        "protectedTime": false,
+        "active": true
+      },
+      "warnings": [
+        "Перегрузка с бронью HELIX (2026-10-05 – 2026-11-06, 50 %)"
+      ],
+      "conflicts": [
+        {
+          "id": 4,
+          "employee": "Лис Сергей",
+          "bookingA": "HELIX",
+          "bookingB": "ATLAS",
+          "from": "2026-10-12",
+          "to": "2026-10-16",
+          "totalLoad": 150,
+          "status": "OPEN",
+          "first": {
+            "id": 11,
+            "employeeId": 8,
+            "employee": "Лис Сергей",
+            "type": "PROJECT",
+            "kind": "HARD",
+            "title": "HELIX",
+            "projectId": 3,
+            "projectPriority": 2,
+            "startDate": "2026-10-05",
+            "endDate": "2026-11-06",
+            "loadPercent": 50,
+            "protectedTime": false,
+            "active": true
+          },
+          "second": {
+            "id": 19,
+            "employeeId": 8,
+            "employee": "Лис Сергей",
+            "type": "PROJECT",
+            "kind": "HARD",
+            "title": "ATLAS",
+            "projectId": 1,
+            "projectPriority": 1,
+            "startDate": "2026-10-12",
+            "endDate": "2026-10-16",
+            "loadPercent": 100,
+            "protectedTime": false,
+            "active": true
+          },
+          "detectedAt": "2026-10-04T18:30:03.642978500Z",
+          "resolutionNote": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "PUT",
+    "path": "/api/projects/1/tasks/1",
+    "user": "pm",
+    "body": {
+      "name": "Анализ требований",
+      "durationDays": 5,
+      "predecessorIds": [
+        9
+      ]
+    }
+  },
+  "response": {
+    "status": 422,
+    "reason": "",
+    "contentType": "application/problem+json",
+    "body": {
+      "type": "about:blank",
+      "title": "Unprocessable Entity",
+      "status": 422,
+      "detail": "Зависимости задач образуют цикл",
+      "instance": "/api/projects/1/tasks/1",
+      "code": "CYCLE"
+    }
+  }
+}

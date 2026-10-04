@@ -1,0 +1,35 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/projects",
+    "user": "pm",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": [
+      {
+        "id": 1,
+        "code": "ATLAS",
+        "name": "GenAI-ассистент для банковского контакт-центра",
+        "pm": "Иванов Дмитрий",
+        "location": "Минск",
+        "priority": 1,
+        "startDate": "2026-10-05",
+        "status": "PLANNING"
+      },
+      {
+        "id": 2,
+        "code": "ORION",
+        "name": "Миграция e-commerce платформы в облако",
+        "pm": "Иванов Дмитрий",
+        "location": "Варшава",
+        "priority": 2,
+        "startDate": "2026-10-05",
+        "status": "PLANNING"
+      }
+    ]
+  }
+}

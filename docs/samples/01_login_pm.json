@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/auth/login",
+    "user": null,
+    "body": {
+      "login": "pm",
+      "password": "resplan"
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyZXNwbGFuIiwic3ViIjoicG0iLCJyb2xlIjoiUE0iLCJpYXQiOjE3OTExMzg2MDEsImV4cCI6MTc5MTE2NzQwMX0.6oWy5dVVTGUofjYXOdoWm1_YEOhQuBSDmAvM4m0hD5U",
+      "tokenType": "Bearer",
+      "expiresAt": "2026-10-05T02:30:01.686032500Z",
+      "user": {
+        "id": 1,
+        "login": "pm",
+        "role": "PM",
+        "employeeId": 13,
+        "fullName": "Иванов Дмитрий"
+      }
+    }
+  }
+}

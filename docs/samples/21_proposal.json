@@ -1,0 +1,38 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/requests/2/proposal",
+    "user": "rm",
+    "body": {
+      "employeeId": 7
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "id": 2,
+      "project": "ATLAS",
+      "taskId": 8,
+      "task": "Системное тестирование",
+      "role": "QA-инженер",
+      "grade": "Middle",
+      "skills": {
+        "Test automation": 3,
+        "Playwright": 3
+      },
+      "loadPercent": 100,
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-17",
+      "status": "PENDING_PM",
+      "candidateId": 7,
+      "candidate": "Ткач Анна",
+      "bookingId": 18,
+      "bookingKind": "SOFT",
+      "warnings": [
+        "Перегрузка с бронью ORION (100 %)"
+      ]
+    }
+  }
+}

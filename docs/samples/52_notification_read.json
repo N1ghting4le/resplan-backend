@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "PATCH",
+    "path": "/api/notifications/8",
+    "user": "pm",
+    "body": {
+      "read": true
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "id": 8,
+      "message": "Конфликт №2 (Зелински Марек: ORION и HELIX) эскалирован операционному директору: Оба проекта критичны для заказчиков, требуется решение операционного директора",
+      "createdAt": "2026-10-04T18:30:03.473273Z",
+      "read": true
+    }
+  }
+}

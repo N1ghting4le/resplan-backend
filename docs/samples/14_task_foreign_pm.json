@@ -1,0 +1,26 @@
+{
+  "request": {
+    "method": "PUT",
+    "path": "/api/projects/1/tasks/16",
+    "user": "pm2",
+    "body": {
+      "name": "Нагрузочное тестирование",
+      "durationDays": 5,
+      "predecessorIds": [
+        7
+      ]
+    }
+  },
+  "response": {
+    "status": 403,
+    "reason": "",
+    "contentType": "application/problem+json",
+    "body": {
+      "type": "about:blank",
+      "title": "Forbidden",
+      "status": 403,
+      "detail": "Изменять сетевой график может только PM проекта ATLAS",
+      "instance": "/api/projects/1/tasks/16"
+    }
+  }
+}

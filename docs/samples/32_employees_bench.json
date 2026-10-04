@@ -1,0 +1,113 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/employees?date=2026-10-05&bench=true",
+    "user": "rm",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": [
+      {
+        "id": 16,
+        "name": "Дженкинс Сара",
+        "grade": "Senior",
+        "location": "Варшава",
+        "hourlyRate": 25.0,
+        "skills": {},
+        "loadPercent": 0,
+        "bench": true
+      },
+      {
+        "id": 13,
+        "name": "Иванов Дмитрий",
+        "grade": "Lead",
+        "location": "Минск",
+        "hourlyRate": 35.0,
+        "skills": {},
+        "loadPercent": 0,
+        "bench": true
+      },
+      {
+        "id": 1,
+        "name": "Ковалёв Алексей",
+        "grade": "Middle",
+        "location": "Минск",
+        "hourlyRate": 22.0,
+        "skills": {
+          "PostgreSQL": 3,
+          "Docker": 3,
+          "Java": 4,
+          "Spring": 4
+        },
+        "loadPercent": 0,
+        "bench": true
+      },
+      {
+        "id": 6,
+        "name": "Новик Павел",
+        "grade": "Senior",
+        "location": "Минск",
+        "hourlyRate": 26.0,
+        "skills": {
+          "MUI": 4,
+          "React": 5,
+          "TypeScript": 5
+        },
+        "loadPercent": 0,
+        "bench": true
+      },
+      {
+        "id": 14,
+        "name": "Петров Олег",
+        "grade": "Lead",
+        "location": "Ташкент",
+        "hourlyRate": 30.0,
+        "skills": {},
+        "loadPercent": 0,
+        "bench": true
+      },
+      {
+        "id": 15,
+        "name": "Санчес Мария",
+        "grade": "Senior",
+        "location": "Варшава",
+        "hourlyRate": 30.0,
+        "skills": {},
+        "loadPercent": 0,
+        "bench": true
+      },
+      {
+        "id": 5,
+        "name": "Хасан Омар",
+        "grade": "Senior",
+        "location": "Эр-Рияд",
+        "hourlyRate": 32.0,
+        "skills": {
+          "RAG": 3,
+          "MLOps": 4,
+          "Python": 5,
+          "LLM": 5
+        },
+        "loadPercent": 0,
+        "bench": true
+      },
+      {
+        "id": 9,
+        "name": "Юсупова Карина",
+        "grade": "Junior",
+        "location": "Ташкент",
+        "hourlyRate": 12.0,
+        "skills": {
+          "Test automation": 2,
+          "Playwright": 2,
+          "Manual testing": 3
+        },
+        "loadPercent": 0,
+        "bench": true
+      }
+    ]
+  }
+}

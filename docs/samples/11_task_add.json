@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/projects/1/tasks",
+    "user": "pm",
+    "body": {
+      "name": "Нагрузочное тестирование",
+      "durationDays": 4,
+      "predecessorIds": [
+        7
+      ]
+    }
+  },
+  "response": {
+    "status": 201,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "id": 16,
+      "name": "Нагрузочное тестирование",
+      "durationDays": 4,
+      "assigneeId": null,
+      "assignee": null,
+      "predecessorIds": [
+        7
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/bookings?employeeId=4&from=2026-10-01&to=2026-10-31",
+    "user": "rm",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": [
+      {
+        "id": 7,
+        "employeeId": 4,
+        "employee": "Алиев Тимур",
+        "type": "PROJECT",
+        "kind": "SOFT",
+        "title": "ORION",
+        "projectId": 2,
+        "projectPriority": 2,
+        "startDate": "2026-10-05",
+        "endDate": "2026-10-16",
+        "loadPercent": 50,
+        "protectedTime": false,
+        "active": true
+      }
+    ]
+  }
+}

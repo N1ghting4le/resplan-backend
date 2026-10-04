@@ -1,0 +1,20 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/auth/me",
+    "user": "pm",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "id": 1,
+      "login": "pm",
+      "role": "PM",
+      "employeeId": 13,
+      "fullName": "Иванов Дмитрий"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "request": {
+    "method": "PATCH",
+    "path": "/api/bookings/7",
+    "user": "rm",
+    "body": {
+      "kind": "HARD",
+      "loadPercent": 60
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "booking": {
+        "id": 7,
+        "employeeId": 4,
+        "employee": "Алиев Тимур",
+        "type": "PROJECT",
+        "kind": "HARD",
+        "title": "ORION",
+        "projectId": 2,
+        "projectPriority": 2,
+        "startDate": "2026-10-05",
+        "endDate": "2026-10-16",
+        "loadPercent": 60,
+        "protectedTime": false,
+        "active": true
+      },
+      "warnings": [],
+      "conflicts": []
+    }
+  }
+}

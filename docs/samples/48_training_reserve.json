@@ -1,0 +1,40 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/trainings",
+    "user": "ld",
+    "body": {
+      "employeeId": 9,
+      "courseTitle": "ISTQB Advanced Test Automation Engineer",
+      "provider": "ISTQB",
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-13",
+      "loadPercent": 100,
+      "protectedTime": true
+    }
+  },
+  "response": {
+    "status": 201,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "booking": {
+        "id": 21,
+        "employeeId": 9,
+        "employee": "Юсупова Карина",
+        "type": "TRAINING",
+        "kind": "TRAINING",
+        "title": "ISTQB Advanced Test Automation Engineer",
+        "projectId": null,
+        "projectPriority": null,
+        "startDate": "2026-11-09",
+        "endDate": "2026-11-13",
+        "loadPercent": 100,
+        "protectedTime": true,
+        "active": true
+      },
+      "warnings": [],
+      "conflicts": []
+    }
+  }
+}

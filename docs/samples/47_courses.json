@@ -1,0 +1,30 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/courses",
+    "user": "ld",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": [
+      {
+        "id": 1,
+        "title": "AWS Certified ML Specialty",
+        "provider": "EPAM University"
+      },
+      {
+        "id": 3,
+        "title": "Курс «Spring AI: основы»",
+        "provider": "EPAM University"
+      },
+      {
+        "id": 2,
+        "title": "Сертификация Azure AI Engineer",
+        "provider": "EPAM University"
+      }
+    ]
+  }
+}

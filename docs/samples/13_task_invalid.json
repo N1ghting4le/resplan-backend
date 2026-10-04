@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/projects/1/tasks",
+    "user": "pm",
+    "body": {
+      "name": "",
+      "durationDays": -2
+    }
+  },
+  "response": {
+    "status": 400,
+    "reason": "",
+    "contentType": "application/problem+json",
+    "body": {
+      "type": "about:blank",
+      "title": "Bad Request",
+      "status": 400,
+      "detail": "Поля запроса заполнены некорректно",
+      "instance": "/api/projects/1/tasks",
+      "errors": {
+        "durationDays": "должно быть не меньше 0",
+        "name": "не должно быть пустым"
+      }
+    }
+  }
+}

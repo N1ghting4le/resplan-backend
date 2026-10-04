@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/auth/login",
+    "user": null,
+    "body": {
+      "login": "ld",
+      "password": "resplan"
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyZXNwbGFuIiwic3ViIjoibGQiLCJyb2xlIjoiTEQiLCJpYXQiOjE3OTExMzg2MDEsImV4cCI6MTc5MTE2NzQwMX0.W8GICU3JiZUDqNIzaqfvnMJXuOcRtJdZscctF-QFffY",
+      "tokenType": "Bearer",
+      "expiresAt": "2026-10-05T02:30:01.980201600Z",
+      "user": {
+        "id": 4,
+        "login": "ld",
+        "role": "LD",
+        "employeeId": 16,
+        "fullName": "Дженкинс Сара"
+      }
+    }
+  }
+}

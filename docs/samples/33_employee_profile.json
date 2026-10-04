@@ -1,0 +1,45 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/employees/1?date=2026-10-20",
+    "user": "rm",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "id": 1,
+      "name": "Ковалёв Алексей",
+      "grade": "Middle",
+      "location": "Минск",
+      "hourlyRate": 22.0,
+      "skills": {
+        "Java": 4,
+        "Spring": 4,
+        "PostgreSQL": 3,
+        "Docker": 3
+      },
+      "loadPercent": 100,
+      "bench": false,
+      "bookings": [
+        {
+          "id": 1,
+          "employeeId": 1,
+          "employee": "Ковалёв Алексей",
+          "type": "PROJECT",
+          "kind": "HARD",
+          "title": "ATLAS",
+          "projectId": 1,
+          "projectPriority": 1,
+          "startDate": "2026-10-14",
+          "endDate": "2026-10-27",
+          "loadPercent": 100,
+          "protectedTime": false,
+          "active": true
+        }
+      ]
+    }
+  }
+}

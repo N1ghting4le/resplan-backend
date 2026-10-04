@@ -1,0 +1,34 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/requests",
+    "user": "pm",
+    "body": {
+      "taskId": 16,
+      "role": "",
+      "grade": "Senior",
+      "loadPercent": 150,
+      "startDate": "2026-11-27",
+      "endDate": "2026-11-23",
+      "skills": {}
+    }
+  },
+  "response": {
+    "status": 400,
+    "reason": "",
+    "contentType": "application/problem+json",
+    "body": {
+      "type": "about:blank",
+      "title": "Bad Request",
+      "status": 400,
+      "detail": "Поля запроса заполнены некорректно",
+      "instance": "/api/requests",
+      "errors": {
+        "periodValid": "Дата окончания раньше даты начала",
+        "role": "не должно быть пустым",
+        "skills": "не должно быть пустым",
+        "loadPercent": "должно быть не больше 100"
+      }
+    }
+  }
+}

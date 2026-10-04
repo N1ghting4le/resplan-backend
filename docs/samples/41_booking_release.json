@@ -1,0 +1,31 @@
+{
+  "request": {
+    "method": "DELETE",
+    "path": "/api/bookings/20",
+    "user": "rm",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "booking": {
+        "id": 20,
+        "employeeId": 10,
+        "employee": "Зелински Марек",
+        "type": "PROJECT",
+        "kind": "HARD",
+        "title": "HELIX",
+        "projectId": 3,
+        "projectPriority": 2,
+        "startDate": "2026-10-12",
+        "endDate": "2026-11-30",
+        "loadPercent": 50,
+        "protectedTime": false,
+        "active": false
+      },
+      "returnedRequestId": 3
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/requests/2/approval",
+    "user": "pm",
+    "body": null
+  },
+  "response": {
+    "status": 409,
+    "reason": "",
+    "contentType": "application/problem+json",
+    "body": {
+      "type": "about:blank",
+      "title": "Conflict",
+      "status": 409,
+      "detail": "Недопустимый переход запроса из статуса APPROVED в статус APPROVED",
+      "instance": "/api/requests/2/approval",
+      "code": "STATUS"
+    }
+  }
+}

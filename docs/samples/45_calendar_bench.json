@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/me/calendar?period=WEEK&date=2026-10-07",
+    "user": "emp2",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "employeeId": 9,
+      "employee": "Юсупова Карина",
+      "period": "WEEK",
+      "from": "2026-10-05",
+      "to": "2026-10-11",
+      "workdays": 5,
+      "averageLoad": 0.0,
+      "peakLoad": 0,
+      "bench": true,
+      "items": [],
+      "hints": [
+        "https://learn.epam.com",
+        "https://www.coursera.org"
+      ]
+    }
+  }
+}

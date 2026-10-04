@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/auth/login",
+    "user": null,
+    "body": {
+      "login": "rm",
+      "password": "resplan"
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyZXNwbGFuIiwic3ViIjoicm0iLCJyb2xlIjoiUk0iLCJpYXQiOjE3OTExMzg2MDEsImV4cCI6MTc5MTE2NzQwMX0.pT81a6LAJfRoqVTa0zuVqGL-iD6N2Fi3bfp-ly9ASz8",
+      "tokenType": "Bearer",
+      "expiresAt": "2026-10-05T02:30:01.904860200Z",
+      "user": {
+        "id": 3,
+        "login": "rm",
+        "role": "RM",
+        "employeeId": 15,
+        "fullName": "Санчес Мария"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "DELETE",
+    "path": "/api/trainings/21",
+    "user": "ld",
+    "body": null
+  },
+  "response": {
+    "status": 204,
+    "reason": "",
+    "contentType": null,
+    "body": null
+  }
+}

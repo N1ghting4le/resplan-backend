@@ -1,0 +1,23 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/requests/2/proposal",
+    "user": "rm",
+    "body": {
+      "employeeId": 1
+    }
+  },
+  "response": {
+    "status": 422,
+    "reason": "",
+    "contentType": "application/problem+json",
+    "body": {
+      "type": "about:blank",
+      "title": "Unprocessable Entity",
+      "status": 422,
+      "detail": "Период пересекается с защищенным обучением «Курс «Spring AI: основы»» (2026-11-16 – 2026-11-18)",
+      "instance": "/api/requests/2/proposal",
+      "code": "PROTECTED_TIME"
+    }
+  }
+}

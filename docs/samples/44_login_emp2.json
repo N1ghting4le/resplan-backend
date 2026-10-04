@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/auth/login",
+    "user": null,
+    "body": {
+      "login": "emp2",
+      "password": "resplan"
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyZXNwbGFuIiwic3ViIjoiZW1wMiIsInJvbGUiOiJFTVAiLCJpYXQiOjE3OTExMzg2MDMsImV4cCI6MTc5MTE2NzQwM30.HPGnZdSu58aw_WygRXJiTSqTQSfMmE9LixzGxdVisx0",
+      "tokenType": "Bearer",
+      "expiresAt": "2026-10-05T02:30:03.986807300Z",
+      "user": {
+        "id": 6,
+        "login": "emp2",
+        "role": "EMP",
+        "employeeId": 9,
+        "fullName": "Юсупова Карина"
+      }
+    }
+  }
+}

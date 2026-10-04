@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: resplan
+  profiles:
+    default: demo
+  datasource:
+    url: jdbc:h2:mem:resplan;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: true
+  jackson:
+    serialization:
+      indent-output: true
+
+resplan:
+  jwt:
+    # Секрет HMAC-SHA256 в Base64; в промышленной конфигурации задается переменной окружения
+    secret: ${RESPLAN_JWT_SECRET:tkOAeMwRVKARIkV4J2ROzbQVY75tblnnvl5/7loX1AI=}
+    ttl: 8h
+    issuer: resplan
+  learning:
+    portals:
+      - https://learn.epam.com
+      - https://www.coursera.org
+
+springdoc:
+  swagger-ui:
+    operations-sorter: method
+    tags-sorter: alpha
+
+---
+# PostgreSQL 18: база resplan_lab9 (см. db/create_database.sql), учетные данные – из переменных окружения
+spring:
+  config:
+    activate:
+      on-profile: postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5432/resplan_lab9
+    username: ${RESPLAN_DB_USER:resplan_app}
+    password: ${RESPLAN_DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: create

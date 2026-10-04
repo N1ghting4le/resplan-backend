@@ -1,0 +1,54 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/requests/2/candidates",
+    "user": "rm",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": [
+      {
+        "employeeId": 7,
+        "name": "Ткач Анна",
+        "grade": "Middle",
+        "location": "Варшава",
+        "match": 86,
+        "scores": {
+          "skills": 1.0,
+          "grade": 1.0,
+          "availability": 0.5,
+          "cost": 0.7333333333333334
+        }
+      },
+      {
+        "employeeId": 9,
+        "name": "Юсупова Карина",
+        "grade": "Junior",
+        "location": "Ташкент",
+        "match": 71,
+        "scores": {
+          "skills": 0.6666666666666666,
+          "grade": 0.4,
+          "availability": 1.0,
+          "cost": 0.9333333333333333
+        }
+      },
+      {
+        "employeeId": 8,
+        "name": "Лис Сергей",
+        "grade": "Senior",
+        "location": "Минск",
+        "match": 67,
+        "scores": {
+          "skills": 0.5,
+          "grade": 0.7,
+          "availability": 1.0,
+          "cost": 0.5333333333333333
+        }
+      }
+    ]
+  }
+}

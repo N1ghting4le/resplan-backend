@@ -1,0 +1,45 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/requests",
+    "user": "pm",
+    "body": {
+      "taskId": 16,
+      "role": "Инженер по нагрузочному тестированию",
+      "grade": "Senior",
+      "loadPercent": 50,
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-27",
+      "skills": {
+        "Performance testing": 3,
+        "Test automation": 4
+      }
+    }
+  },
+  "response": {
+    "status": 201,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "id": 4,
+      "project": "ATLAS",
+      "taskId": 16,
+      "task": "Нагрузочное тестирование",
+      "role": "Инженер по нагрузочному тестированию",
+      "grade": "Senior",
+      "skills": {
+        "Performance testing": 3,
+        "Test automation": 4
+      },
+      "loadPercent": 50,
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-27",
+      "status": "SEARCHING",
+      "candidateId": null,
+      "candidate": null,
+      "bookingId": null,
+      "bookingKind": null,
+      "warnings": []
+    }
+  }
+}

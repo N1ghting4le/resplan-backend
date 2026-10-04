@@ -1,0 +1,38 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/requests/3/proposal",
+    "user": "rm",
+    "body": {
+      "employeeId": 10
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "id": 3,
+      "project": "HELIX",
+      "taskId": 15,
+      "task": "CI/CD и облачная инфраструктура",
+      "role": "DevOps-инженер",
+      "grade": "Senior",
+      "skills": {
+        "Kubernetes": 4,
+        "AWS": 3
+      },
+      "loadPercent": 50,
+      "startDate": "2026-10-12",
+      "endDate": "2026-11-30",
+      "status": "PENDING_PM",
+      "candidateId": 10,
+      "candidate": "Зелински Марек",
+      "bookingId": 20,
+      "bookingKind": "SOFT",
+      "warnings": [
+        "Перегрузка с бронью ORION (80 %)"
+      ]
+    }
+  }
+}

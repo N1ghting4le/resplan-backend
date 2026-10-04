@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/bookings",
+    "user": "rm",
+    "body": {
+      "employeeId": 1,
+      "projectId": 1,
+      "kind": "SOFT",
+      "startDate": "2026-11-16",
+      "endDate": "2026-11-18",
+      "loadPercent": 50
+    }
+  },
+  "response": {
+    "status": 422,
+    "reason": "",
+    "contentType": "application/problem+json",
+    "body": {
+      "type": "about:blank",
+      "title": "Unprocessable Entity",
+      "status": 422,
+      "detail": "Период пересекается с защищенным обучением «Курс «Spring AI: основы»» (2026-11-16 – 2026-11-18)",
+      "instance": "/api/bookings",
+      "code": "PROTECTED_TIME"
+    }
+  }
+}

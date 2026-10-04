@@ -1,0 +1,34 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/requests/4/external-hire",
+    "user": "rm",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "id": 4,
+      "project": "ATLAS",
+      "taskId": 16,
+      "task": "Нагрузочное тестирование",
+      "role": "Инженер по нагрузочному тестированию",
+      "grade": "Senior",
+      "skills": {
+        "Test automation": 4,
+        "Performance testing": 3
+      },
+      "loadPercent": 50,
+      "startDate": "2026-11-23",
+      "endDate": "2026-11-27",
+      "status": "EXTERNAL_HIRE",
+      "candidateId": null,
+      "candidate": null,
+      "bookingId": null,
+      "bookingKind": null,
+      "warnings": []
+    }
+  }
+}

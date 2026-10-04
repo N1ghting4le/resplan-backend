@@ -1,0 +1,28 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/trainings",
+    "user": "ld",
+    "body": {
+      "employeeId": 1,
+      "courseTitle": "Kubernetes для разработчиков",
+      "startDate": "2026-10-20",
+      "endDate": "2026-10-22",
+      "loadPercent": 100,
+      "protectedTime": true
+    }
+  },
+  "response": {
+    "status": 422,
+    "reason": "",
+    "contentType": "application/problem+json",
+    "body": {
+      "type": "about:blank",
+      "title": "Unprocessable Entity",
+      "status": 422,
+      "detail": "Период обучения пересекается с жесткой бронью на проект ATLAS (2026-10-14 – 2026-10-27), выберите другие даты",
+      "instance": "/api/trainings",
+      "code": "PROTECTED_TIME"
+    }
+  }
+}

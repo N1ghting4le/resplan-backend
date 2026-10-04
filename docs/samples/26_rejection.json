@@ -1,0 +1,37 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/requests/1/rejection",
+    "user": "pm",
+    "body": {
+      "reason": "Недостаточный опыт с RAG в production"
+    }
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "id": 1,
+      "project": "ATLAS",
+      "taskId": 5,
+      "task": "RAG-модуль GenAI",
+      "role": "ML-инженер (GenAI)",
+      "grade": "Senior",
+      "skills": {
+        "Python": 4,
+        "LLM": 4,
+        "RAG": 3
+      },
+      "loadPercent": 100,
+      "startDate": "2026-10-20",
+      "endDate": "2026-11-04",
+      "status": "SEARCHING",
+      "candidateId": null,
+      "candidate": null,
+      "bookingId": null,
+      "bookingKind": null,
+      "warnings": []
+    }
+  }
+}

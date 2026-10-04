@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "DELETE",
+    "path": "/api/bookings/20",
+    "user": "rm",
+    "body": null
+  },
+  "response": {
+    "status": 422,
+    "reason": "",
+    "contentType": "application/problem+json",
+    "body": {
+      "type": "about:blank",
+      "title": "Unprocessable Entity",
+      "status": 422,
+      "detail": "Бронь 20 уже снята",
+      "instance": "/api/bookings/20",
+      "code": "RELEASED"
+    }
+  }
+}

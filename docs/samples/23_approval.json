@@ -1,0 +1,80 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/requests/2/approval",
+    "user": "pm",
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "reason": "",
+    "contentType": "application/json",
+    "body": {
+      "request": {
+        "id": 2,
+        "project": "ATLAS",
+        "taskId": 8,
+        "task": "Системное тестирование",
+        "role": "QA-инженер",
+        "grade": "Middle",
+        "skills": {
+          "Test automation": 3,
+          "Playwright": 3
+        },
+        "loadPercent": 100,
+        "startDate": "2026-11-11",
+        "endDate": "2026-11-17",
+        "status": "APPROVED",
+        "candidateId": 7,
+        "candidate": "Ткач Анна",
+        "bookingId": 18,
+        "bookingKind": "HARD",
+        "warnings": []
+      },
+      "conflicts": [
+        {
+          "id": 3,
+          "employee": "Ткач Анна",
+          "bookingA": "ORION",
+          "bookingB": "ATLAS",
+          "from": "2026-11-11",
+          "to": "2026-11-13",
+          "totalLoad": 200,
+          "status": "OPEN",
+          "first": {
+            "id": 10,
+            "employeeId": 7,
+            "employee": "Ткач Анна",
+            "type": "PROJECT",
+            "kind": "HARD",
+            "title": "ORION",
+            "projectId": 2,
+            "projectPriority": 2,
+            "startDate": "2026-10-05",
+            "endDate": "2026-11-13",
+            "loadPercent": 100,
+            "protectedTime": false,
+            "active": true
+          },
+          "second": {
+            "id": 18,
+            "employeeId": 7,
+            "employee": "Ткач Анна",
+            "type": "PROJECT",
+            "kind": "HARD",
+            "title": "ATLAS",
+            "projectId": 1,
+            "projectPriority": 1,
+            "startDate": "2026-11-11",
+            "endDate": "2026-11-17",
+            "loadPercent": 100,
+            "protectedTime": false,
+            "active": true
+          },
+          "detectedAt": "2026-10-04T18:30:02.851697200Z",
+          "resolutionNote": null
+        }
+      ]
+    }
+  }
+}
