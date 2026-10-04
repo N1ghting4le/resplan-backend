@@ -1,5 +1,6 @@
 package com.resplan.api;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,6 +10,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /** UC-1: проекты, задачи сетевого графика и пересчет критического пути */
+@DisplayName("Интеграционные тесты REST API: UC-1 сетевой график")
 class ProjectPlanApiTest extends ApiTestSupport {
 
     private static final int ATLAS = 1;

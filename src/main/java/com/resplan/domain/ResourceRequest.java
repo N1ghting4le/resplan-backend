@@ -117,6 +117,9 @@ public class ResourceRequest {
 
     /** PM отклоняет кандидата: причина сохраняется, запрос возвращается на подбор */
     public ProjectBooking rejectCandidate(String reason, AppUser by) {
+        // отклонить можно только предложенного кандидата; переход APPROVED -> SEARCHING
+        // допустим лишь при снятии брони ресурсным менеджером (bookingReleased)
+        if (status != RequestStatus.PENDING_PM) throw new IllegalTransitionException(status, RequestStatus.SEARCHING);
         if (reason == null || reason.trim().length() < MIN_REASON_LENGTH) {
             throw new BusinessRuleException("REASON", "Необходимо указать причину отклонения");
         }

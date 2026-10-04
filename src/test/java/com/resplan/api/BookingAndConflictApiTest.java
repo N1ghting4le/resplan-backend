@@ -1,5 +1,6 @@
 package com.resplan.api;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /** UC-6 и UC-7: ресурсные конфликты и управление бронированием */
+@DisplayName("Интеграционные тесты REST API: UC-6, UC-7 конфликты и бронирование")
 class BookingAndConflictApiTest extends ApiTestSupport {
 
     private int bookingId(String lastName, String project, String kind) throws Exception {

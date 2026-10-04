@@ -1,5 +1,6 @@
 package com.resplan.api;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -11,6 +12,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /** UC-4: вход в систему, маркер доступа и ролевые ограничения */
+@DisplayName("Интеграционные тесты REST API: UC-4 аутентификация и разграничение доступа")
 class AuthApiTest extends ApiTestSupport {
 
     @Test

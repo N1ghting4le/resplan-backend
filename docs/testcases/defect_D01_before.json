@@ -1,0 +1,200 @@
+{
+  "steps": [
+    {
+      "step": "Утверждение кандидата",
+      "request": "POST /api/requests/1/approval",
+      "status": 200,
+      "response": {
+        "request": {
+          "id": 1,
+          "project": "ATLAS",
+          "taskId": 5,
+          "task": "RAG-модуль GenAI",
+          "role": "ML-инженер (GenAI)",
+          "grade": "Senior",
+          "skills": {
+            "Python": 4,
+            "LLM": 4,
+            "RAG": 3
+          },
+          "loadPercent": 100,
+          "startDate": "2026-10-20",
+          "endDate": "2026-11-04",
+          "status": "APPROVED",
+          "candidateId": 4,
+          "candidate": "Алиев Тимур",
+          "bookingId": 17,
+          "bookingKind": "HARD",
+          "warnings": []
+        },
+        "conflicts": []
+      }
+    },
+    {
+      "step": "Отклонение утвержденного кандидата",
+      "request": "POST /api/requests/1/rejection",
+      "status": 200,
+      "response": {
+        "id": 1,
+        "project": "ATLAS",
+        "taskId": 5,
+        "task": "RAG-модуль GenAI",
+        "role": "ML-инженер (GenAI)",
+        "grade": "Senior",
+        "skills": {
+          "Python": 4,
+          "LLM": 4,
+          "RAG": 3
+        },
+        "loadPercent": 100,
+        "startDate": "2026-10-20",
+        "endDate": "2026-11-04",
+        "status": "SEARCHING",
+        "candidateId": null,
+        "candidate": null,
+        "bookingId": null,
+        "bookingKind": null,
+        "warnings": []
+      }
+    },
+    {
+      "step": "Задачи проекта",
+      "request": "GET /api/projects/1/tasks",
+      "status": 200,
+      "response": [
+        {
+          "id": 1,
+          "name": "Анализ требований",
+          "durationDays": 5,
+          "assigneeId": 11,
+          "assignee": "Козлова Дарья",
+          "predecessorIds": []
+        },
+        {
+          "id": 2,
+          "name": "Проектирование архитектуры",
+          "durationDays": 4,
+          "assigneeId": 2,
+          "assignee": "Чен Вэй",
+          "predecessorIds": [
+            1
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Подготовка датасетов",
+          "durationDays": 6,
+          "assigneeId": 4,
+          "assignee": "Алиев Тимур",
+          "predecessorIds": [
+            1
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Backend API",
+          "durationDays": 10,
+          "assigneeId": 1,
+          "assignee": "Ковалёв Алексей",
+          "predecessorIds": [
+            2
+          ]
+        },
+        {
+          "id": 5,
+          "name": "RAG-модуль GenAI",
+          "durationDays": 12,
+          "assigneeId": 4,
+          "assignee": "Алиев Тимур",
+          "predecessorIds": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Web-интерфейс оператора",
+          "durationDays": 8,
+          "assigneeId": 6,
+          "assignee": "Новик Павел",
+          "predecessorIds": [
+            2
+          ]
+        },
+        {
+          "id": 7,
+          "name": "Интеграция модулей",
+          "durationDays": 4,
+          "assigneeId": 1,
+          "assignee": "Ковалёв Алексей",
+          "predecessorIds": [
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Системное тестирование",
+          "durationDays": 5,
+          "assigneeId": null,
+          "assignee": null,
+          "predecessorIds": [
+            7
+          ]
+        },
+        {
+          "id": 9,
+          "name": "Развертывание у заказчика",
+          "durationDays": 2,
+          "assigneeId": 10,
+          "assignee": "Зелински Марек",
+          "predecessorIds": [
+            8
+          ]
+        },
+        {
+          "id": 10,
+          "name": "Пользовательская документация",
+          "durationDays": 3,
+          "assigneeId": null,
+          "assignee": null,
+          "predecessorIds": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "step": "Карточка запроса",
+      "request": "GET /api/requests/1",
+      "status": 200,
+      "response": {
+        "id": 1,
+        "project": "ATLAS",
+        "taskId": 5,
+        "task": "RAG-модуль GenAI",
+        "role": "ML-инженер (GenAI)",
+        "grade": "Senior",
+        "skills": {
+          "Python": 4,
+          "LLM": 4,
+          "RAG": 3
+        },
+        "loadPercent": 100,
+        "startDate": "2026-10-20",
+        "endDate": "2026-11-04",
+        "status": "SEARCHING",
+        "candidateId": null,
+        "candidate": null,
+        "bookingId": null,
+        "bookingKind": null,
+        "warnings": []
+      }
+    }
+  ],
+  "summary": {
+    "requestStatus": "SEARCHING",
+    "taskAssignee": "Алиев Тимур"
+  }
+}

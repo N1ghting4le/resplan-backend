@@ -1,6 +1,7 @@
 package com.resplan.api;
 
 import com.resplan.domain.BookingKind;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.*;
@@ -8,6 +9,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /** UC-2, UC-3, UC-5: запросы на ресурс, подбор, утверждение и отклонение кандидатов */
+@DisplayName("Интеграционные тесты REST API: UC-2, UC-3, UC-5 запросы и подбор")
 class ResourcePlanningIntegrationTest extends ApiTestSupport {
 
     private static final int R1 = 1, R2 = 2, R3 = 3;

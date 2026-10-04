@@ -1,5 +1,6 @@
 package com.resplan.api;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.Matchers.*;
@@ -7,6 +8,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /** UC-8 и UC-9: персональный график загрузки и защищенное время на обучение */
+@DisplayName("Интеграционные тесты REST API: UC-8, UC-9 календарь и обучение")
 class CalendarAndTrainingApiTest extends ApiTestSupport {
 
     @Test

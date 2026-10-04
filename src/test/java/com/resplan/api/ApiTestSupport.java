@@ -3,6 +3,7 @@ package com.resplan.api;
 import com.jayway.jsonpath.JsonPath;
 import com.resplan.config.DemoData;
 import com.resplan.repository.EmployeeRepository;
+import org.junit.jupiter.api.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,6 +22,7 @@ import java.util.Map;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
 /** Общая основа интеграционных тестов REST API: вход под демонстрационными учетными записями */
+@Tag("integration")
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("demo")
